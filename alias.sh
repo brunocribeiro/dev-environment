@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias aws='docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli'
+alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
 
 alias createuser='docker exec -it postgres createuser -U postgres -O postgres'
 alias createdb='docker exec -it postgres createdb -U postgres -O postgres'
