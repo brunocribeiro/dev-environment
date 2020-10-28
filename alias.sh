@@ -7,7 +7,7 @@ alias createdb='docker exec -it postgres createdb -U postgres -O postgres'
 alias dropdb='docker exec -it postgres dropdb -U postgres'
 alias psql='docker exec -it postgres psql -U postgres'
 
-alias pg_dump='docker exec -i postgres pg_dump -U postgres '
+alias pg_dump='docker exec -i postgres pg_dump -U postgres'
 alias pg_restore='docker exec -i postgres pg_restore -U postgres -v'
 
 alias docker-container-ip="docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "
