@@ -10,9 +10,9 @@ Dependencies to run the environment
 What will you find in the docker-compose?
 ---
 
-- `cassandra` version `3`;
-- `glowroot` Glowroot Central version `0.13.6`;
-- `postgres` PostgreSQL version `11.6`;
+- [`cassandra`](https://hub.docker.com/_/cassandra/) version `3`;
+- [`glowroot`](https://hub.docker.com/r/brunocesar/glowroot-central/) Glowroot Central version `0.13.6`;
+- [`postgres`](https://hub.docker.com/_/postgres) PostgreSQL version `11.6`;
 
 Starting all the containers
 ---
@@ -62,13 +62,13 @@ brunosilva@brunos-macbook ~ % echo "docker run --rm -it -v ~/.aws:/root/.aws -v 
 
 ```console
 brunosilva@brunos-macbook ~ % aws s3 ls
-2019-03-25 20:21:46 103850359708-awsmacietrail-dataevent
-2020-09-16 21:36:54 analytics-qa.ringdna.net
-2018-02-07 12:31:05 api.snapshots
-2019-02-26 21:25:05 app-lab.ringdna.net
-2017-07-19 21:49:55 app-qa.ringdna.net
-2017-07-19 21:49:30 app.ringdna.net
-2019-06-17 23:39:27 aws-athena-query-results-103850359708-us-east-1
+2019-03-25 20:21:46 ...
+2020-09-16 21:36:54 ...
+2018-02-07 12:31:05 ...
+2019-02-26 21:25:05 ...
+2017-07-19 21:49:55 ...
+2017-07-19 21:49:30 ...
+2019-06-17 23:39:27 ...
 ...
 ```
 
