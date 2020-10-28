@@ -28,5 +28,18 @@ services:
       - CASSANDRA_PASSWORD=cassandra
       - CASSANDRA_SYMMETRIC_ENCRYPTION_KEY=9f8b7e86573ea0bf0c1ab43fd7b0d341
 
+  # https://hub.docker.com/_/postgres
+  postgres:
+    image: postgres:11.6
+    container_name: postgres
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgresql-volume:/var/lib/postgresql/data
+
 volumes:
   cassandra-volume:
+  postgresql-volume:
