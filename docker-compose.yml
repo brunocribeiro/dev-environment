@@ -41,6 +41,29 @@ services:
     volumes:
       - postgresql-volume:/var/lib/postgresql/data
 
+  # https://hub.docker.com/_/redis
+  redis:
+    image: redis:4.0.8
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-volume:/data
+
+  # https://hub.docker.com/r/rediscommander/redis-commander
+  redis-commander:
+    image: rediscommander/redis-commander
+    container_name: rediscommander
+    restart: unless-stopped
+    ports:
+      - 4567:8081
+    environment:
+      - REDIS_HOSTS=redis:redis:6379
+    depends_on:
+      - redis
+
 volumes:
   cassandra-volume:
   postgresql-volume:
+  redis-volume:

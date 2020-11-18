@@ -13,6 +13,8 @@ What will you find in the docker-compose?
 - [`cassandra`](https://hub.docker.com/_/cassandra/) version `3`;
 - [`glowroot`](https://hub.docker.com/r/brunocesar/glowroot-central/) Glowroot Central version `0.13.6`;
 - [`postgres`](https://hub.docker.com/_/postgres) PostgreSQL version `11.6`;
+- [`redis`](https://hub.docker.com/_/redis) Redis version `4.0.8`;
+- [`redis-commander`](https://hub.docker.com/r/rediscommander/redis-commander) redis commander version `latest`;
 
 Starting all the containers
 ---
@@ -46,6 +48,12 @@ Ports exposed to the _host_
 
 - `postgres`:
   - internal port `5432` listen from the host at `5432`;
+
+- `redis`:
+  - internal port `6379` listen from the host at `6379`;
+
+- `redis-commander`:
+  - internal port `8081` listen from the host at `4567`;
 
 Aliases
 ---
