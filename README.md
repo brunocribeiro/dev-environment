@@ -4,8 +4,8 @@ dev-environment
 Dependencies to run the environment
 ---
 
-- _docker-ce_: see [here](https://docs.docker.com/install/) how to install and set it up on youy environment;
-- _docker-compose_: see [here](https://docs.docker.com/compose/install/) how to install and set it up on youy environment;
+- _docker-ce_: see [here](https://docs.docker.com/install/) how to install and set it up on your environment;
+- _docker-compose_: see [here](https://docs.docker.com/compose/install/) how to install and set it up on your environment;
 
 What will you find in the docker-compose?
 ---
