@@ -2,7 +2,7 @@
 
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
 
-alias createuser='docker exec -it postgres createuser -U postgres -O postgres'
+alias createuser='docker exec -it postgres createuser -U postgres'
 alias createdb='docker exec -it postgres createdb -U postgres -O postgres'
 alias dropdb='docker exec -it postgres dropdb -U postgres'
 alias psql='docker exec -it postgres psql -U postgres'
