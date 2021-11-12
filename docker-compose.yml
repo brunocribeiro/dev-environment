@@ -6,8 +6,8 @@ services:
     restart: unless-stopped
     container_name: cassandra
     ports:
-      - 7000:7000
-      - 9042:9042
+      - "7000:7000"
+      - "9042:9042"
     environment:
       - JVM_OPTS=-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Xms512m -Xmx1024m
     volumes:
@@ -21,8 +21,8 @@ services:
     depends_on:
       - cassandra
     ports:
-      - 4000:4000
-      - 8181:8181
+      - "4000:4000"
+      - "8181:8181"
     environment:
       - CASSANDRA_CONTACT_POINTS=cassandra
       - CASSANDRA_USERNAME=cassandra
@@ -35,7 +35,7 @@ services:
     container_name: postgres
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - "5432:5432"
     environment:
       - POSTGRES_PASSWORD=postgres
     volumes:
@@ -57,7 +57,7 @@ services:
     container_name: rediscommander
     restart: unless-stopped
     ports:
-      - 4567:8081
+      - "4567:8081"
     environment:
       - REDIS_HOSTS=redis:redis:6379
     depends_on:
